@@ -100,7 +100,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, bulk=False):
                     thumb_path = await screenshot(file, duration, sender)
                 except Exception:
                     thumb_path = None
-                await client.send_video(
+                await userbot.send_video(
                     chat_id=sender,
                     video=file,
                     caption=caption,
@@ -120,7 +120,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, bulk=False):
                 await bot.send_file(sender, file, caption=caption)
             else:
                 thumb_path=thumbnail(sender)
-                await client.send_document(
+                await userbot.send_document(
                     sender,
                     file, 
                     caption=caption,
