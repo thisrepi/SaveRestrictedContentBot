@@ -148,7 +148,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, bulk=False):
                 return None
         except Exception as e:
             print(e)
-            await client.edit_message_text(sender, edit_id, f'Failed to save: `{msg_link}`')
+            await client.edit_message_text(sender, edit_id, f'Failed to save: `{e}`')
             if os.path.isfile(file) == True:
                 os.remove(file)
             return None
@@ -166,7 +166,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, bulk=False):
                 return None
         except Exception as e:
             print(e)
-            await client.edit_message_text(sender, edit_id, f'Failed to save: `{msg_link}`')
+            await client.edit_message_text(sender, edit_id, f'Failed to save: `{e}`')
             return None
         await edit.delete()
         return None
