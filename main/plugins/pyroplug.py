@@ -5,6 +5,7 @@ import asyncio, time, os
 from .. import Bot, bot
 from main.plugins.progress import progress_for_pyrogram
 from main.plugins.helpers import screenshot
+from telethon.tl.types import DocumentAttributeVideo
 
 from pyrogram import Client, filters
 from pyrogram.errors import ChannelBanned, ChannelInvalid, ChannelPrivate, ChatIdInvalid, ChatInvalid, FloodWait
